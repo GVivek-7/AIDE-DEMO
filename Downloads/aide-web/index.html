@@ -1,4 +1,4 @@
-<title>Aide</title>
+<title>AIDE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
@@ -277,16 +277,49 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 .empty{color:var(--muted);font-size:15px;padding:8px 0}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Watermark logo */
+.watermark{position:fixed;bottom:-60px;right:-60px;width:520px;height:520px;pointer-events:none;z-index:0;opacity:.055;}
+body > .watermark{z-index:0}
 </style>
+
+<!-- Transparent AIDE logo watermark -->
+<div class="watermark" aria-hidden="true">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sun rays -->
+    <g fill="#F2B04B">
+      <polygon points="100,18 106,38 94,38"/>
+      <polygon points="100,162 106,182 94,182"/>
+      <polygon points="18,100 38,106 38,94"/>
+      <polygon points="162,100 182,106 182,94"/>
+      <polygon points="36,36 52,48 44,56"/>
+      <polygon points="164,36 156,44 148,52"/>
+      <polygon points="36,164 44,144 52,152"/>
+      <polygon points="164,164 148,148 156,156"/>
+    </g>
+    <!-- Sun circle -->
+    <circle cx="100" cy="100" r="40" fill="#F2B04B"/>
+    <!-- Hide bottom half of sun (mountains cover it) -->
+    <rect x="40" y="100" width="120" height="60" fill="currentColor" style="fill:var(--bg,#F3F7F5)"/>
+    <!-- Sun arc outline -->
+    <path d="M60,100 A40,40 0 0,1 140,100" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- Left mountain -->
+    <polygon points="40,160 90,90 115,130 75,160" fill="#3E8A30"/>
+    <!-- Right mountain (larger) -->
+    <polygon points="75,160 115,95 160,160" fill="#2E7020"/>
+    <!-- Ground base -->
+    <rect x="35" y="158" width="130" height="8" rx="4" fill="#2E7020"/>
+  </svg>
+</div>
 
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#home" data-route="home" aria-label="Aide home">
+    <a class="logo" href="#home" data-route="home" aria-label="AIDE home">
       <svg width="38" height="38" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#133F3A"/><circle cx="18" cy="20" r="7" fill="#F2B04B"/><rect x="6" y="20" width="24" height="10" fill="#133F3A"/><path d="M8 21h20M11 25h14" stroke="#9FD3C6" stroke-width="2" stroke-linecap="round"/><path d="M18 7v3M10 11l2 2M26 11l-2 2" stroke="#F2B04B" stroke-width="2" stroke-linecap="round"/></svg>
-      <b>Aide</b>
+      <b>AIDE</b>
     </a>
     <nav class="topnav" aria-label="Main">
-      <a href="#home" data-route="home">Home</a>
+      <a href="#home" data-route="home">AIDE Home</a>
       <a href="#monitor" data-route="monitor">Track &amp; Monitor</a>
       <a href="#companion" data-route="companion">Companion</a>
     </nav>
@@ -310,7 +343,7 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
       </div>
     </div>
     <div class="hero-copy">
-      <div class="eyebrow">Aide platform</div>
+      <div class="eyebrow">AIDE platform</div>
       <h1 id="home-title">Help for under the veil.</h1>
       <p>Bridging moments of uncertainty with gentle digital companionship and dependable clinical continuity.</p>
       <div class="hero-actions">
@@ -388,26 +421,26 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 
   <section aria-labelledby="team-title">
     <div class="section-head">
-      <div><h2 id="team-title">Meet the team</h2><p class="muted" style="margin-top:4px">The builders and designers behind Aide.</p></div>
+      <div><h2 id="team-title">Meet the team</h2><p class="muted" style="margin-top:4px">The builders and designers behind AIDE.</p></div>
       <span class="pill teal">3 active previews</span>
     </div>
     <div class="team">
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#CDEDE4"/><path d="M0 44c10-6 20-6 30 0s20 6 30 0v16H0z" fill="#9FD3C6"/><text x="30" y="37" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#133F3A">V</text></svg><span class="status" style="background:#F2B04B"></span></div>
-        <div class="info"><h3>Vivek</h3><div class="role">Lead Architect</div><span class="pill teal">Track &amp; Monitor</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#CDEDE4"/><path d="M0 44c10-6 20-6 30 0s20 6 30 0v16H0z" fill="#9FD3C6"/><text x="30" y="37" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#133F3A">VS</text></svg><span class="status" style="background:#F2B04B"></span></div>
+        <div class="info"><h3>Vivek Subramanian</h3><div class="role">Tech Lead</div><span class="pill teal">Track &amp; Monitor</span></div>
       </article>
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#FCE4BF"/><circle cx="46" cy="14" r="10" fill="#F6CB85"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#6B430A">E</text></svg><span class="status" style="background:#2E7A6C"></span></div>
-        <div class="info"><h3>Elena</h3><div class="role">UI/UX Designer</div><span class="pill amber">Real-Time Audio</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#FCE4BF"/><circle cx="46" cy="14" r="10" fill="#F6CB85"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#6B430A">N</text></svg><span class="status" style="background:#2E7A6C"></span></div>
+        <div class="info"><h3>Noah Mendez</h3><div class="role">Founder</div><span class="pill amber">Real-Time Audio</span></div>
       </article>
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#DDE4EF"/><path d="M0 30h60" stroke="#C3CEDF" stroke-width="10"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#2F3C53">M</text></svg><span class="status" style="background:#2E7A6C"></span></div>
-        <div class="info"><h3>Marcus</h3><div class="role">Full-Stack Engineer</div><span class="pill slate">Data Insights</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#DDE4EF"/><path d="M0 30h60" stroke="#C3CEDF" stroke-width="10"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#2F3C53">E</text></svg><span class="status" style="background:#2E7A6C"></span></div>
+        <div class="info"><h3>Elijah</h3><div class="role">Data Lead</div><span class="pill slate">Data Insights</span></div>
       </article>
     </div>
   </section>
 
-  <footer><span>Aide · Gentle companionship, dependable care</span><span>Preview build</span></footer>
+  <footer><span>AIDE · Gentle companionship, dependable care</span><span>Preview build</span></footer>
 </section>
 
 <!-- ========== MONITOR ========== -->
@@ -466,7 +499,7 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
       </div>
     </div>
     <div class="status" style="grid-column:1/-1">
-      <div><b>CarePulse Dashboard v2.4</b><br><span>Real-time behavioural monitoring active</span></div>
+      <div><b>AIDE CarePulse Dashboard v2.4</b><br><span>Real-time behavioural monitoring active</span></div>
       <span style="width:42px;height:42px;border-radius:21px;background:var(--brand-raised);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9FD3C6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
     </div>
   </div>
