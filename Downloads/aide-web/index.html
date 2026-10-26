@@ -1,40 +1,56 @@
-<title>AIDE</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>AIDE · Calmer evenings for people living with dementia</title>
+<meta name="description" content="AIDE supports aged care teams and families through the late afternoon and evening, with a familiar voice for residents living with dementia and a clear record of what helped.">
+<link rel="canonical" href="https://aide-care.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="AIDE · Calmer evenings for people living with dementia">
+<meta property="og:description" content="A familiar voice for residents living with dementia, and a clear record of what helped.">
+<meta property="og:image" content="https://aide-care.com/assets/aide-logo-512.png">
+<link rel="preload" href="assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/outfit-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Layout: mobile-first single column with a bottom tab bar; from 860px a top nav and two-column sections inside a 1120px frame. */
+@font-face{font-family:"Outfit";src:url("assets/fonts/outfit-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Outfit";src:url("assets/fonts/outfit-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Outfit";src:url("assets/fonts/outfit-latin-600-normal.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Caveat Brush";src:url("assets/fonts/caveat-brush-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+/* Palette: AIDE Colour Palette design system (Antler cover slide + logo). Light only. */
 :root{
-  --bg:#F3F7F5; --surface:#FFFFFF; --surface-2:#E4F1EC; --line:#D6E5E0;
-  --fg:#10302C; --muted:#46605B; --link:#1F5A52;
-  --brand:#133F3A; --brand-raised:#245A51; --on-brand:#FFFFFF; --on-brand-muted:#CFE6DF;
-  --mint:#9FD3C6; --amber:#F2B04B; --on-amber:#2A1B04; --amber-ink:#8A5A12; --amber-soft:#FCE9C8;
-  --slate-soft:#E5EAF3; --slate-ink:#36445E; --danger:#B4392A; --danger-soft:#FBE3DF;
-  --shadow:0 10px 30px rgba(19,63,58,.10);
-  --f-display:'Bricolage Grotesque','Avenir Next','Segoe UI',sans-serif;
-  --f-body:'Figtree','Avenir Next','Segoe UI',system-ui,sans-serif;
+  /* raw palette */
+  --crimson-600:#A3141F; --crimson-700:#82101A;
+  --night-900:#2F060C; --night-700:#6F141B; --night-500:#8A1C22; --hill-700:#680C16; --hill-900:#46080D;
+  --cream-50:#FFFCF6; --cream-100:#FBEED8; --cream-200:#EFDFC4;
+  --gold-400:#E7A93A; --sun-400:#F5C346; --glow-500:#B96132;
+  --ink-900:#2A1A1C; --ink-600:#6B5A57; --on-night:#FBEFD9; --honey-200:#F3D9A4;
+  --logo-green-700:#3E7027;
+  --night-grad:linear-gradient(180deg,var(--night-900) 0%,var(--night-700) 62%,var(--night-500) 100%);
+  --bg:var(--cream-50); --surface:#FFFFFF; --surface-2:var(--cream-100); --line:var(--cream-200);
+  --fg:var(--ink-900); --muted:var(--ink-600); --link:var(--crimson-600);
+  --brand:var(--night-900); --brand-raised:var(--night-700); --on-brand:var(--on-night); --on-brand-muted:var(--honey-200);
+  --mint:var(--glow-500); --amber:var(--sun-400); --on-amber:var(--night-900); --amber-ink:var(--crimson-700); --amber-soft:#FBE7BE;
+  --slate-soft:var(--cream-200); --slate-ink:var(--ink-600); --danger:#B4392A; --danger-soft:#FBE3DF;
+  --shadow:0 10px 30px rgba(47,6,12,.10);
+  --f-display:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-body:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-script:'Caveat Brush','Segoe Script',cursive;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B1816; --surface:#12221F; --surface-2:#192D29; --line:#27403A;
-  --fg:#E6F1EE; --muted:#A3BBB5; --link:#8FD0C1;
-  --brand:#18423C; --brand-raised:#24574F; --on-brand:#FFFFFF; --on-brand-muted:#CFE6DF;
-  --mint:#9FD3C6; --amber:#F2B04B; --on-amber:#2A1B04; --amber-ink:#F3C27A; --amber-soft:#3A2C14;
-  --slate-soft:#232C3B; --slate-ink:#BFCBE0; --danger:#F08A7A; --danger-soft:#3A1E1A;
-  --shadow:0 10px 30px rgba(0,0,0,.35); color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#0B1816; --surface:#12221F; --surface-2:#192D29; --line:#27403A;
-  --fg:#E6F1EE; --muted:#A3BBB5; --link:#8FD0C1;
-  --brand:#18423C; --brand-raised:#24574F; --on-brand:#FFFFFF; --on-brand-muted:#CFE6DF;
-  --mint:#9FD3C6; --amber:#F2B04B; --on-amber:#2A1B04; --amber-ink:#F3C27A; --amber-soft:#3A2C14;
-  --slate-soft:#232C3B; --slate-ink:#BFCBE0; --danger:#F08A7A; --danger-soft:#3A1E1A;
-  --shadow:0 10px 30px rgba(0,0,0,.35); color-scheme:dark }
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;text-wrap:balance;margin:0;font-weight:600}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em;text-wrap:balance;margin:0;font-weight:600;color:var(--night-900)}
 p{margin:0}
 a{color:var(--link)}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:8px}
+:focus-visible{outline:3px solid var(--crimson-600);outline-offset:2px;border-radius:8px}
+.hero :focus-visible,.theme :focus-visible,.dash .status :focus-visible,.demo:focus-visible,.drawer-ok :focus-visible{outline-color:var(--gold-400)}
 .wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
 @media (min-width:600px){.wrap{padding-inline:24px}}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
@@ -46,17 +62,21 @@ svg{flex:none}
 .top.scrolled{border-bottom-color:var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg)}
-.logo b{font-family:var(--f-display);font-size:23px;letter-spacing:-.03em}
+.logo b{font-family:var(--f-display);font-size:23px;letter-spacing:-.02em;color:var(--night-900)}
+.logo img{width:38px;height:38px}
+.top .btn{min-height:44px;padding:0 18px;border-radius:8px}
 .topnav{display:none;gap:4px;background:var(--surface);border:1px solid var(--line);padding:5px;border-radius:999px}
 .topnav a{padding:9px 18px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
-.topnav a[aria-current="page"]{background:var(--brand);color:var(--on-brand)}
+.topnav a[aria-current="page"]{background:var(--night-900);color:var(--on-night)}
+.topnav a:hover{color:var(--crimson-600)}
+.topnav a[aria-current="page"]:hover{color:var(--on-night)}
 .iconbtn{width:44px;height:44px;border-radius:22px;border:1px solid var(--line);background:var(--surface);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:var(--link)}
 @media (min-width:860px){.topnav{display:flex}}
 
 /* Bottom tabs (mobile) */
-.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
 .tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:54px;border-radius:16px;text-decoration:none;color:var(--muted);font-size:12px;font-weight:600}
-.tabs a[aria-current="page"]{background:var(--brand);color:var(--on-brand)}
+.tabs a[aria-current="page"]{background:var(--night-900);color:var(--on-night)}
 @media (min-width:860px){.tabs{display:none}}
 main{padding-bottom:110px}
 @media (min-width:860px){main{padding-bottom:40px}}
@@ -71,33 +91,39 @@ main{padding-bottom:110px}
 .pill.amber{background:var(--amber-soft);color:var(--amber-ink)}
 .pill.slate{background:var(--slate-soft);color:var(--slate-ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:none}
-.btn.primary{background:var(--amber);color:var(--on-amber)}
-.btn.ghost-on-brand{background:transparent;color:var(--on-brand);border:1.5px solid #4D857B}
-.btn.solid{background:var(--brand);color:var(--on-brand)}
-.btn.outline{background:transparent;color:var(--link);border:1.5px solid var(--line)}
+.btn.primary{background:var(--crimson-600);color:var(--cream-50)}
+.btn.primary:hover{background:var(--crimson-700);filter:none}
+.on-dark .btn.primary{background:var(--cream-50);color:var(--crimson-600)}
+.on-dark .btn.primary:hover{background:var(--cream-100)}
+.btn.ghost-on-brand{background:transparent;color:var(--on-brand);border:1.5px solid var(--on-night)}
+.btn.ghost-on-brand:hover{background:rgba(251,239,217,.08)}
+.btn.solid{background:var(--crimson-600);color:var(--cream-50)}
+.btn.solid:hover{background:var(--crimson-700);filter:none}
+.btn.outline{background:transparent;color:var(--link);border:1.5px solid var(--crimson-600)}
 .btn:hover{filter:brightness(1.04)}
 .arrow-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:700;text-decoration:none}
 
 /* HERO */
-.hero{background:var(--brand);border-radius:32px;padding:10px;display:grid;gap:10px;color:var(--on-brand)}
+.hero{position:relative;overflow:hidden;background:var(--night-grad);border-radius:32px;padding:10px;display:grid;gap:10px;color:var(--on-brand)}
 @media (min-width:860px){.hero{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:stretch;padding:12px}}
-.stage{position:relative;border-radius:24px;overflow:hidden;background:#15433C;aspect-ratio:4/3.4;max-width:100%;touch-action:none;cursor:grab}
+.stage{position:relative;z-index:1;border-radius:24px;overflow:hidden;background:#2F060C;aspect-ratio:4/3.4;max-width:100%;touch-action:none;cursor:grab}
 .stage.dragging{cursor:grabbing}
 @media (min-width:860px){.stage{aspect-ratio:auto;min-height:480px}}
 .stage canvas{display:block;width:100%;height:100%}
-.stage .chip{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;padding:7px 12px 7px 10px;border-radius:999px;background:rgba(8,28,25,.62);font-size:12.5px;font-weight:600;color:#fff}
-.dot{width:8px;height:8px;border-radius:4px;background:var(--amber);box-shadow:0 0 0 0 rgba(242,176,75,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(242,176,75,0)}100%{box-shadow:0 0 0 0 rgba(242,176,75,0)}}
+.stage .chip{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:8px;padding:7px 12px 7px 10px;border-radius:999px;background:rgba(47,6,12,.68);font-size:12.5px;font-weight:600;color:#fff}
+.dot{width:8px;height:8px;border-radius:4px;background:var(--sun-400);box-shadow:0 0 0 0 rgba(245,195,70,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(245,195,70,0)}100%{box-shadow:0 0 0 0 rgba(245,195,70,0)}}
 .stage .ctrls{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}
-.stage .ctrls button{min-width:40px;height:40px;padding:0 12px;border-radius:20px;border:none;background:rgba(255,255,255,.16);color:#E3F4EF;font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;cursor:pointer}
-.stage .ctrls button:hover{background:rgba(255,255,255,.26)}
-.stage .hint{position:absolute;left:14px;bottom:16px;font-size:12px;color:#CFE6DF;opacity:.85}
-.stage .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#CFE6DF}
-.hero-copy{padding:18px 14px 20px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-@media (min-width:860px){.hero-copy{padding:28px 30px}}
-.hero-copy .eyebrow{color:#F3C27A}
-.hero-copy h1{font-size:clamp(34px,4.6vw,54px);line-height:1.02;color:#fff}
-.hero-copy p{color:var(--on-brand-muted);font-size:17px;max-width:44ch}
+.stage .ctrls button{min-width:44px;height:44px;padding:0 12px;border-radius:22px;border:none;background:rgba(47,6,12,.62);color:var(--on-night);font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.stage .ctrls button:hover{background:rgba(47,6,12,.82)}
+.stage .hint{position:absolute;left:14px;bottom:16px;font-size:13px;color:var(--on-night);background:rgba(47,6,12,.55);padding:4px 10px;border-radius:999px}
+.stage .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:var(--honey-200)}
+.hero-copy{position:relative;z-index:1;padding:18px 14px 20px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+@media (min-width:860px){.hero-copy{padding:28px 30px 120px}}
+.hero-copy .eyebrow{color:var(--honey-200)}
+.hero-copy h1{font-size:clamp(34px,4.2vw,50px);line-height:1.05;color:var(--on-night)}
+.hero-copy h1 .script{font-family:var(--f-script);font-weight:400;letter-spacing:0;color:var(--sun-400);display:inline-block;position:relative;font-size:1.08em}
+.hero-copy p{color:var(--on-night);font-size:17px;max-width:44ch}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 
 .mission{display:flex;gap:18px;align-items:flex-start;padding:24px}
@@ -120,7 +146,7 @@ main{padding-bottom:110px}
 .flow li{display:flex;gap:14px;align-items:flex-start;position:relative}
 @media (min-width:760px){.flow li{flex-direction:column}}
 .flow .ic{flex:none;width:48px;height:48px;border-radius:15px;background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--link)}
-.flow li:nth-child(2) .ic{background:var(--brand);color:var(--amber)}
+.flow li:nth-child(2) .ic{background:var(--night-900);color:var(--sun-400)}
 .flow b{display:block;font-size:16px}
 .flow span{font-size:15px;color:var(--muted)}
 
@@ -145,7 +171,7 @@ footer{padding-block:28px 8px;color:var(--muted);font-size:14px;display:flex;jus
 .pagehead p{color:var(--muted);font-size:17px}
 
 /* MONITOR */
-.dash{background:var(--brand);border-radius:30px;padding:12px;display:grid;gap:12px}
+.dash{background:var(--night-grad);border-radius:30px;padding:12px;display:grid;gap:12px}
 @media (min-width:960px){.dash{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
 .panel{background:var(--surface);border-radius:22px;padding:20px;min-width:0}
 .panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:8px}
@@ -160,8 +186,8 @@ footer{padding-block:28px 8px;color:var(--muted);font-size:14px;display:flex;jus
 .chart-box .grid{stroke:var(--line)}
 .chart-box .band{fill:var(--amber-soft)}
 .chart-box .band-label{fill:var(--amber-ink);font-size:11px;font-weight:700;letter-spacing:.08em;font-family:var(--f-body)}
-.chart-box .bar{fill:var(--mint)}
-.chart-box .bar.peak{fill:var(--link)}
+.chart-box .bar{fill:#D9A79A}
+.chart-box .bar.peak{fill:var(--crimson-600)}
 .chart-box .val{fill:var(--fg);font-size:12px;font-weight:700;font-family:var(--f-body)}
 .dash .side{display:flex;flex-direction:column;gap:12px;min-width:0}
 .dash .status{color:var(--on-brand);padding:8px 10px;display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -181,7 +207,7 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 .seg input,.chips input{position:absolute;opacity:0;pointer-events:none}
 .seg label{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;background:var(--surface-2);font-weight:700;cursor:pointer;font-size:15px}
 .seg input:checked + label{background:var(--brand);color:var(--on-brand)}
-.seg input:focus-visible + label,.chips input:focus-visible + label{outline:3px solid var(--amber)}
+.seg input:focus-visible + label,.chips input:focus-visible + label{outline:3px solid var(--crimson-600)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;font-weight:600;cursor:pointer}
 .chips input:checked + label{background:var(--surface-2);border-color:var(--link);color:var(--link)}
@@ -198,7 +224,7 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 .ep-main .s{font-size:14px;color:var(--muted);overflow-wrap:anywhere}
 .int{display:inline-flex;gap:3px;vertical-align:middle;margin-left:6px}
 .int i{width:7px;height:12px;border-radius:2px;background:var(--line)}
-.int i.on{background:var(--amber)}
+.int i.on{background:var(--crimson-600)}
 .del{width:40px;height:40px;border-radius:20px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
 .del:hover{color:var(--danger);border-color:var(--danger)}
 
@@ -213,7 +239,7 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 .cap p{color:var(--muted);font-size:15px}
 .ic.amber{background:var(--amber-soft);color:var(--amber-ink)}
 .ic.teal{background:var(--surface-2);color:var(--link)}
-.ic.dark{background:var(--brand);color:var(--amber)}
+.ic.dark{background:var(--night-900);color:var(--sun-400)}
 
 .soon{display:grid;gap:16px;padding:28px 24px;border-radius:28px;background:var(--surface-2);align-items:center}
 @media (min-width:760px){.soon{grid-template-columns:auto minmax(0,1fr) auto}}
@@ -222,34 +248,34 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 .store{display:flex;align-items:center;gap:10px;min-height:56px;padding:0 16px;border-radius:16px;background:var(--surface);border:1px solid var(--line);color:var(--fg)}
 .store small{display:block;font-size:11px;color:var(--muted);line-height:1.2}
 .store b{font-size:14.5px}
-.demo{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:0 10px 0 24px;border-radius:999px;background:var(--brand);color:var(--on-brand);text-decoration:none}
+.demo{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px;padding:0 10px 0 24px;border-radius:999px;background:var(--night-grad);color:var(--on-brand);text-decoration:none}
 .demo small{display:block;color:var(--on-brand-muted);font-size:13px}
-.demo .play{width:48px;height:48px;border-radius:24px;background:var(--amber);color:var(--on-amber);display:flex;align-items:center;justify-content:center}
+.demo .play{width:48px;height:48px;border-radius:24px;background:var(--cream-50);color:var(--crimson-600);display:flex;align-items:center;justify-content:center}
 
 /* COMPANION */
-.live{background:var(--brand);border-radius:32px;padding:12px;display:grid;gap:12px}
+.live{background:var(--night-grad);border-radius:32px;padding:12px;display:grid;gap:12px}
 @media (min-width:900px){.live{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
 .live-top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--on-brand);padding:6px 8px;grid-column:1/-1}
 .live-top b{display:flex;align-items:center;gap:8px;font-size:15px}
 .rec-dot{width:9px;height:9px;border-radius:5px;background:#FF7A6B;animation:blinkdot 1.6s infinite}
 @keyframes blinkdot{50%{opacity:.35}}
 .room{padding:6px 12px;border-radius:999px;background:var(--brand-raised);color:var(--on-brand-muted);font-size:13px;font-weight:600}
-.screen{position:relative;border-radius:24px;background:radial-gradient(110% 80% at 50% 30%,#245A51 0%,#0F302B 70%);padding:30px 16px 22px;display:flex;flex-direction:column;align-items:center;gap:16px;min-height:360px;justify-content:center}
+.screen{position:relative;border-radius:24px;background:radial-gradient(110% 80% at 50% 30%,#8A1C22 0%,#2F060C 72%);padding:30px 16px 22px;display:flex;flex-direction:column;align-items:center;gap:16px;min-height:360px;justify-content:center}
 .face{position:relative;width:150px;height:150px}
-.face .ring{position:absolute;inset:0;border-radius:50%;border:2px solid #7FD1BE;opacity:0}
+.face .ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--honey-200);opacity:0}
 .speaking .face .ring{animation:ring 2.2s ease-out infinite}
 .speaking .face .ring:nth-child(2){animation-delay:1.1s}
 @keyframes ring{0%{transform:scale(.9);opacity:.75}100%{transform:scale(1.5);opacity:0}}
 .face .disc{position:absolute;inset:0;border-radius:50%;overflow:hidden}
 .face .disc svg{width:100%;height:100%}
-.bubble{max-width:320px;min-height:46px;padding:12px 16px;border-radius:18px;background:#FFFFFF;color:#10302C;font-weight:600;text-align:center;font-size:15px}
-.bubble.idle{background:rgba(255,255,255,.12);color:#CFE6DF;font-weight:500}
+.bubble{max-width:320px;min-height:46px;padding:12px 16px;border-radius:18px;background:var(--cream-50);color:var(--ink-900);font-weight:600;text-align:center;font-size:15px}
+.bubble.idle{background:rgba(251,239,217,.12);color:var(--honey-200);font-weight:500}
 .wave{display:flex;align-items:center;gap:5px;height:40px;padding:0 16px;border-radius:999px;background:rgba(0,0,0,.25)}
-.wave i{width:4px;height:26px;border-radius:2px;background:#7FD1BE;transform:scaleY(.25);transition:transform .2s}
-.wave i:nth-child(3n){background:#F2B04B}
+.wave i{width:4px;height:26px;border-radius:2px;background:var(--honey-200);transform:scaleY(.25);transition:transform .2s}
+.wave i:nth-child(3n){background:var(--sun-400)}
 .speaking .wave i{animation:wv 1s ease-in-out infinite}
 @keyframes wv{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
-.screen .sig{font-size:13px;color:#CFE6DF}
+.screen .sig{font-size:13px;color:var(--honey-200)}
 .controls{display:flex;flex-direction:column;gap:12px;min-width:0}
 .ctl{background:var(--surface);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:12px}
 .ctl h2{font-size:18px}
@@ -278,52 +304,115 @@ fieldset{border:none;margin:0;padding:0;min-width:0}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
-/* Watermark logo */
-.watermark{position:fixed;bottom:-60px;right:-60px;width:520px;height:520px;pointer-events:none;z-index:0;opacity:.055;}
-body > .watermark{z-index:0}
-</style>
+[hidden]{display:none!important}
+/* Deck-style decoration (stars, glow, sun, hills) */
+.sky{position:absolute;inset:0;pointer-events:none;z-index:0}
+.sky .stars{position:absolute;inset:0;width:100%;height:100%}
+.sky .stars circle{fill:var(--on-night)}
+.sky .glow{position:absolute;right:-8%;bottom:-140px;width:620px;height:460px;border-radius:50%;background:radial-gradient(closest-side,rgba(185,97,50,.55),rgba(185,97,50,.2) 55%,rgba(185,97,50,0))}
+.sky .sun{position:absolute;right:9%;bottom:44px;width:110px;height:110px;border-radius:50%;background:var(--sun-400)}
+.sky .hills{position:absolute;left:0;bottom:0;width:100%;height:130px}
+.sky .h7{fill:var(--hill-700)} .sky .h9{fill:var(--hill-900)}
+.hero .sky .sun{width:78px;height:78px;right:4.5%;bottom:30px}
+.hero .sky .glow{width:460px;height:340px;right:-6%;bottom:-120px}
+.hero .sky .hills{height:86px}
+@media (max-width:859px){.hero .sky{display:none}}
 
-<!-- Transparent AIDE logo watermark -->
-<div class="watermark" aria-hidden="true">
-  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <!-- Sun rays -->
-    <g fill="#F2B04B">
-      <polygon points="100,18 106,38 94,38"/>
-      <polygon points="100,162 106,182 94,182"/>
-      <polygon points="18,100 38,106 38,94"/>
-      <polygon points="162,100 182,106 182,94"/>
-      <polygon points="36,36 52,48 44,56"/>
-      <polygon points="164,36 156,44 148,52"/>
-      <polygon points="36,164 44,144 52,152"/>
-      <polygon points="164,164 148,148 156,156"/>
-    </g>
-    <!-- Sun circle -->
-    <circle cx="100" cy="100" r="40" fill="#F2B04B"/>
-    <!-- Hide bottom half of sun (mountains cover it) -->
-    <rect x="40" y="100" width="120" height="60" fill="currentColor" style="fill:var(--bg,#F3F7F5)"/>
-    <!-- Sun arc outline -->
-    <path d="M60,100 A40,40 0 0,1 140,100" fill="none" stroke="#1a1a1a" stroke-width="3"/>
-    <!-- Left mountain -->
-    <polygon points="40,160 90,90 115,130 75,160" fill="#3E8A30"/>
-    <!-- Right mountain (larger) -->
-    <polygon points="75,160 115,95 160,160" fill="#2E7020"/>
-    <!-- Ground base -->
-    <rect x="35" y="158" width="130" height="8" rx="4" fill="#2E7020"/>
-  </svg>
-</div>
+/* Customise: a hyperlink on the 3D display */
+.customise-link{position:absolute;top:14px;right:14px;z-index:2;display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:6px 12px;border:none;border-radius:999px;background:rgba(47,6,12,.68);color:var(--on-night);font:600 14px/1 var(--f-body);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--sun-400);text-decoration-thickness:2px;cursor:pointer}
+.customise-link:hover{background:rgba(47,6,12,.86);color:#FFFFFF}
+.customise-link svg{width:16px;height:16px}
+.link-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0;border:none;background:none;color:var(--crimson-600);font:600 15px/1 var(--f-body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.link-btn:hover{color:var(--crimson-700)}
+
+/* Right side panel */
+.scrim{position:fixed;inset:0;z-index:60;background:rgba(47,6,12,.38)}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(420px,100%);background:var(--cream-50);border-left:1px solid var(--line);box-shadow:-12px 0 40px rgba(47,6,12,.18);display:flex;flex-direction:column;transform:translateX(0);transition:transform .25s ease}
+.drawer[hidden]{display:flex!important;transform:translateX(105%);visibility:hidden}
+.scrim[hidden]{display:none}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(18px + env(safe-area-inset-top,0px)) 22px 16px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:22px}
+.drawer-head p{font-size:14px;color:var(--muted);margin-top:2px}
+.drawer-close{width:44px;height:44px;border-radius:22px;border:1px solid var(--line);background:var(--surface);color:var(--night-900);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:24px}
+.drawer-body h3{font-size:15px;font-family:var(--f-body);font-weight:600;letter-spacing:0;margin-bottom:10px}
+.drawer-body .looks{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.drawer-body .look{padding:12px 6px;font-size:13.5px;border:2px solid var(--line)}
+.drawer-body .look svg{width:60px;height:60px}
+.drawer-body .look[aria-pressed="true"]{border-color:var(--crimson-600)}
+.drawer-body input[type=text]{width:100%;min-height:46px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--ink-600);background:var(--surface)}
+.drawer-foot{padding:14px 22px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:flex;gap:10px;flex-wrap:wrap;background:var(--surface)}
+.drawer-foot .btn{flex:1}
+.hint-sm{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.drawer{transition:none}}
+
+/* Thematic opening + Book a call (after the 3D demo) */
+.theme{position:relative;overflow:hidden;border-radius:32px;background:var(--night-grad);color:var(--on-night);padding:56px 24px 170px}
+@media (min-width:860px){.theme{padding:72px 56px 190px}}
+.theme .inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.theme .eyebrow{color:var(--honey-200)}
+.scroll{background:var(--cream-100);border:2px solid var(--crimson-600);border-radius:8px;padding:20px 32px 28px;transform:rotate(-1deg);max-width:920px;box-shadow:0 1px 2px rgba(42,26,28,.06)}
+.scroll h2{font-family:var(--f-script);font-weight:400;letter-spacing:0;color:var(--crimson-600);line-height:1.02;font-size:clamp(30px,3.4vw,44px)}
+.scroll h2 span{display:block;font-size:clamp(40px,4.8vw,64px);position:relative;padding-bottom:12px}
+.scroll h2 svg{position:absolute;left:4%;bottom:-2px;width:88%;height:14px}
+.theme .lede{font-size:20px;max-width:46ch}
+.theme .three{display:grid;gap:12px;width:100%;max-width:880px;margin-top:4px}
+@media (min-width:760px){.theme .three{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.theme .three div{border-top:2px solid var(--gold-400);padding-top:10px}
+.theme .three b{display:block;font-size:17px}
+.theme .three span{font-size:15px;color:var(--honey-200)}
+.theme .note{font-size:15px;color:var(--honey-200)}
+.todo{display:inline-block;font:500 12.5px/1.3 var(--f-body);color:var(--ink-600);border:1.5px dashed var(--ink-600);border-radius:4px;padding:1px 6px;letter-spacing:0;text-transform:none}
+.theme .todo,.hero .todo{color:var(--honey-200);border-color:var(--honey-200)}
+@media (max-width:599px){.scroll{transform:none;padding:16px 18px 22px}.theme .hero-actions .btn{flex:1 1 100%}}
+
+/* Evidence informed view */
+.ev-stats{display:grid;gap:14px}
+@media (min-width:700px){.ev-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1040px){.ev-stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ev-stat{padding:22px;display:flex;flex-direction:column;gap:10px}
+.ev-stat b{font-family:var(--f-display);font-size:clamp(36px,3.2vw,46px);line-height:1;font-weight:600;color:var(--night-900);font-variant-numeric:tabular-nums;letter-spacing:-.02em;white-space:nowrap}
+.ev-stat p{font-size:15px;color:var(--fg)}
+.ev-stat .src{font-size:13.5px;color:var(--muted);margin-top:auto}
+.ev-stat .src a{color:var(--crimson-600)}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid var(--line)}
+.checks li:first-child{border-top:none}
+.checks b{display:block;font-weight:600;color:var(--night-900)}
+.checks span{font-size:15px;color:var(--muted)}
+.isnt{border:2px solid var(--night-900);border-radius:24px;padding:24px;background:var(--surface);display:grid;gap:12px}
+@media (min-width:860px){.isnt{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px;padding:28px 32px}}
+.isnt h2{font-size:24px}
+.sources{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--muted)}
+.sources a{color:var(--crimson-600);overflow-wrap:anywhere}
+
+/* Footer upgrade */
+footer.site{display:grid;gap:20px;padding-block:28px 8px;border-top:1px solid var(--line);margin-top:8px;color:var(--muted);font-size:14.5px}
+@media (min-width:760px){footer.site{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr)}}
+footer.site .logo b{font-size:20px}
+footer.site h2{font-size:12px;font-family:var(--f-body);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:8px}
+footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+footer.site .legal{grid-column:1/-1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px}
+
+
+</style>
+</head>
+<body>
+
 
 <header class="top" id="top">
   <div class="wrap">
     <a class="logo" href="#home" data-route="home" aria-label="AIDE home">
-      <svg width="38" height="38" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#133F3A"/><circle cx="18" cy="20" r="7" fill="#F2B04B"/><rect x="6" y="20" width="24" height="10" fill="#133F3A"/><path d="M8 21h20M11 25h14" stroke="#9FD3C6" stroke-width="2" stroke-linecap="round"/><path d="M18 7v3M10 11l2 2M26 11l-2 2" stroke="#F2B04B" stroke-width="2" stroke-linecap="round"/></svg>
+      <img src="assets/aide-logo.svg" width="38" height="38" alt="">
       <b>AIDE</b>
     </a>
     <nav class="topnav" aria-label="Main">
       <a href="#home" data-route="home">AIDE Home</a>
       <a href="#monitor" data-route="monitor">Track &amp; Monitor</a>
       <a href="#companion" data-route="companion">Companion</a>
+      <a href="#evidence" data-route="evidence">Evidence informed</a>
     </nav>
-    <button class="iconbtn" aria-label="Your profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+    <a class="btn primary" href="#home" data-route="home" data-scroll="book">Book a call</a>
   </div>
 </header>
 
@@ -332,9 +421,11 @@ body > .watermark{z-index:0}
 <!-- ========== HOME ========== -->
 <section class="view" id="view-home" aria-labelledby="home-title">
   <div class="hero">
+    <div class="sky" aria-hidden="true"><svg class="stars" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice"><circle cx="544" cy="239" r="1.6" opacity="0.3"/><circle cx="609" cy="250" r="1" opacity="0.4"/><circle cx="571" cy="261" r="1" opacity="0.15"/><circle cx="537" cy="66" r="1" opacity="0.4"/><circle cx="1169" cy="405" r="1" opacity="0.4"/><circle cx="28" cy="226" r="1" opacity="0.15"/><circle cx="234" cy="108" r="1" opacity="0.3"/><circle cx="395" cy="251" r="1" opacity="0.4"/><circle cx="286" cy="129" r="1" opacity="0.15"/><circle cx="550" cy="123" r="1" opacity="0.25"/><circle cx="382" cy="103" r="1.3" opacity="0.15"/><circle cx="93" cy="324" r="1.6" opacity="0.15"/><circle cx="1009" cy="167" r="1" opacity="0.15"/><circle cx="262" cy="390" r="1" opacity="0.3"/><circle cx="453" cy="300" r="1.6" opacity="0.15"/><circle cx="678" cy="90" r="1.3" opacity="0.25"/><circle cx="113" cy="145" r="1.6" opacity="0.15"/><circle cx="169" cy="299" r="1" opacity="0.15"/><circle cx="559" cy="209" r="1" opacity="0.3"/><circle cx="610" cy="414" r="1" opacity="0.3"/><circle cx="770" cy="56" r="1.6" opacity="0.2"/><circle cx="11" cy="364" r="1.3" opacity="0.15"/><circle cx="259" cy="170" r="1" opacity="0.15"/><circle cx="1177" cy="96" r="1.3" opacity="0.15"/><circle cx="922" cy="144" r="1.3" opacity="0.3"/><circle cx="97" cy="45" r="1" opacity="0.15"/></svg><div class="glow"></div><div class="sun"></div><svg class="hills" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path class="h7" d="M0 70 C150 40 300 52 470 62 S760 44 900 54 S1110 72 1200 60 V130 H0Z"/><path class="h9" d="M0 102 C190 80 360 92 540 96 S840 80 1020 88 S1160 98 1200 95 V130 H0Z"/></svg></div>
     <div class="stage" id="stage" aria-label="3D scene of Dad in his armchair watching the companion on TV. Drag to look around.">
+      <button class="customise-link" type="button" data-customise aria-haspopup="dialog" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Customise</button>
       <canvas id="scene"></canvas>
-      <div class="chip"><span class="dot"></span>Companion on · Dad's room</div>
+      <div class="chip"><span class="dot"></span><span>Companion on · <span data-room>Dad's room</span></span></div>
       <div class="hint" id="stageHint">Drag to look around</div>
       <div class="ctrls">
         <button id="rotL" aria-label="Turn view left"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
@@ -342,10 +433,10 @@ body > .watermark{z-index:0}
         <button id="rotAuto" aria-label="Return to automatic view"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Auto</button>
       </div>
     </div>
-    <div class="hero-copy">
+    <div class="hero-copy on-dark">
       <div class="eyebrow">AIDE platform</div>
-      <h1 id="home-title">Help for under the veil.</h1>
-      <p>Bridging moments of uncertainty with gentle digital companionship and dependable clinical continuity.</p>
+      <h1 id="home-title"><span class="script">Calmer evenings</span> for people living with dementia.</h1>
+      <p>Gentle digital companionship in the late afternoon and evening, and a clear record of what helped for the care team.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#companion" data-route="companion">Open companion
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -353,6 +444,26 @@ body > .watermark{z-index:0}
       </div>
     </div>
   </div>
+
+
+  <section class="theme on-dark" id="book" aria-labelledby="book-title">
+    <div class="sky" aria-hidden="true"><svg class="stars" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice"><circle cx="720" cy="161" r="1.6" opacity="0.2"/><circle cx="1142" cy="207" r="1" opacity="0.3"/><circle cx="226" cy="72" r="1" opacity="0.4"/><circle cx="304" cy="86" r="1" opacity="0.3"/><circle cx="1051" cy="257" r="1.6" opacity="0.15"/><circle cx="133" cy="24" r="1.3" opacity="0.2"/><circle cx="883" cy="169" r="1.6" opacity="0.4"/><circle cx="589" cy="222" r="1" opacity="0.2"/><circle cx="280" cy="238" r="1" opacity="0.25"/><circle cx="261" cy="385" r="1" opacity="0.15"/><circle cx="328" cy="192" r="1" opacity="0.15"/><circle cx="218" cy="160" r="1" opacity="0.15"/><circle cx="437" cy="375" r="1.3" opacity="0.4"/><circle cx="700" cy="66" r="1" opacity="0.15"/><circle cx="570" cy="155" r="1.3" opacity="0.15"/><circle cx="35" cy="270" r="1.6" opacity="0.15"/><circle cx="872" cy="139" r="1" opacity="0.15"/><circle cx="545" cy="160" r="1" opacity="0.2"/><circle cx="946" cy="385" r="1.3" opacity="0.15"/><circle cx="818" cy="379" r="1.6" opacity="0.15"/><circle cx="1029" cy="244" r="1.6" opacity="0.3"/><circle cx="698" cy="259" r="1" opacity="0.15"/><circle cx="764" cy="417" r="1.6" opacity="0.25"/><circle cx="468" cy="311" r="1.6" opacity="0.3"/><circle cx="556" cy="231" r="1" opacity="0.25"/><circle cx="720" cy="206" r="1" opacity="0.15"/><circle cx="597" cy="261" r="1.6" opacity="0.25"/><circle cx="1068" cy="160" r="1" opacity="0.4"/><circle cx="249" cy="78" r="1.3" opacity="0.3"/><circle cx="598" cy="107" r="1.6" opacity="0.25"/><circle cx="244" cy="186" r="1" opacity="0.2"/><circle cx="464" cy="248" r="1.3" opacity="0.2"/><circle cx="171" cy="213" r="1" opacity="0.15"/><circle cx="1131" cy="122" r="1" opacity="0.15"/></svg><div class="glow"></div><div class="sun"></div><svg class="hills" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path class="h7" d="M0 70 C150 40 300 52 470 62 S760 44 900 54 S1110 72 1200 60 V130 H0Z"/><path class="h9" d="M0 102 C190 80 360 92 540 96 S840 80 1020 88 S1160 98 1200 95 V130 H0Z"/></svg></div>
+    <div class="inner">
+      <div class="eyebrow">Pre-seed · Aged care · Antler 2026</div>
+      <div class="scroll"><h2 id="book-title">A win-win-win on <span>Peace, Pills and Prevention<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C80 3 190 3 297 8" fill="none" stroke="#E7A93A" stroke-width="5" stroke-linecap="round"/></svg></span></h2></div>
+      <p class="lede">Calmer evenings for people living with dementia, a clearer record for care teams, and support in the hours when falls cluster.</p>
+      <div class="three">
+        <div><b>Peace</b><span>Familiar voices and routines when distress tends to rise.</span></div>
+        <div><b>Pills</b><span>A time-stamped record that non-drug support was tried first.</span></div>
+        <div><b>Prevention</b><span>Support concentrated on the late-afternoon falls window.</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#home" data-todo="booking URL">Book a 20-minute call</a>
+        <a class="btn ghost-on-brand" href="#home" data-todo="hello@aide-care.com">Email us</a>
+      </div>
+      <p class="note">Now looking for 2–3 founding pilot sites in Australia. <span class="todo">[[TODO: booking URL and hello@aide-care.com]]</span></p>
+    </div>
+  </section>
 
   <div class="card mission">
     <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></svg></div>
@@ -369,15 +480,15 @@ body > .watermark{z-index:0}
         <svg class="art" viewBox="0 0 560 200" aria-hidden="true">
           <rect width="560" height="200" style="fill:var(--surface-2)"/>
           <rect x="318" y="20" width="160" height="150" rx="16" style="fill:var(--amber-soft)"/>
-          <text x="334" y="44" font-family="Figtree,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" style="fill:var(--amber-ink)">EVENING WINDOW</text>
+          <text x="334" y="44" font-family="Outfit,sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" style="fill:var(--amber-ink)">EVENING WINDOW</text>
           <path d="M30 150h500M30 110h500M30 70h500" style="stroke:var(--line)" stroke-width="1"/>
-          <path d="M30 146C90 134 140 140 196 122s92-14 136-50 78-30 108-6 62 50 90 52V170H30z" fill="#3E8C7F" fill-opacity=".2"/>
+          <path d="M30 146C90 134 140 140 196 122s92-14 136-50 78-30 108-6 62 50 90 52V170H30z" fill="#A3141F" fill-opacity=".2"/>
           <path d="M30 146C90 134 140 140 196 122s92-14 136-50 78-30 108-6 62 50 90 52" fill="none" style="stroke:var(--link)" stroke-width="3.2" stroke-linecap="round"/>
           <circle cx="332" cy="72" r="7" style="fill:var(--surface);stroke:var(--link)" stroke-width="3"/>
-          <circle cx="396" cy="62" r="7" fill="#F2B04B"/>
-          <text x="30" y="190" font-family="Figtree,sans-serif" font-size="13" style="fill:var(--muted)">Morning</text>
-          <text x="196" y="190" font-family="Figtree,sans-serif" font-size="13" style="fill:var(--muted)">Afternoon</text>
-          <text x="360" y="190" font-family="Figtree,sans-serif" font-size="13" style="fill:var(--muted)">Evening</text>
+          <circle cx="396" cy="62" r="7" fill="#E7A93A"/>
+          <text x="30" y="190" font-family="Outfit,sans-serif" font-size="13" style="fill:var(--muted)">Morning</text>
+          <text x="196" y="190" font-family="Outfit,sans-serif" font-size="13" style="fill:var(--muted)">Afternoon</text>
+          <text x="360" y="190" font-family="Outfit,sans-serif" font-size="13" style="fill:var(--muted)">Evening</text>
         </svg>
         <div class="body">
           <div class="eyebrow" style="color:var(--link)">Stream one</div>
@@ -389,16 +500,16 @@ body > .watermark{z-index:0}
       <article class="card stream">
         <svg class="art" viewBox="0 0 560 200" aria-hidden="true">
           <rect width="560" height="200" style="fill:var(--amber-soft)"/>
-          <circle cx="130" cy="100" r="62" fill="#133F3A"/>
-          <circle cx="130" cy="94" r="38" fill="#E3F4EF"/>
-          <circle cx="117" cy="88" r="4.5" fill="#133F3A"/><circle cx="143" cy="88" r="4.5" fill="#133F3A"/>
-          <path d="M116 104c8 8 20 8 28 0" stroke="#133F3A" stroke-width="3.6" fill="none" stroke-linecap="round"/>
-          <path d="M214 74c12 16 12 38 0 54M234 60c20 24 20 58 0 82" stroke="#EFA93A" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="130" cy="100" r="62" fill="#2F060C"/>
+          <circle cx="130" cy="94" r="38" fill="#FBEED8"/>
+          <circle cx="117" cy="88" r="4.5" fill="#2F060C"/><circle cx="143" cy="88" r="4.5" fill="#2F060C"/>
+          <path d="M116 104c8 8 20 8 28 0" stroke="#2F060C" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+          <path d="M214 74c12 16 12 38 0 54M234 60c20 24 20 58 0 82" stroke="#E7A93A" stroke-width="4" fill="none" stroke-linecap="round"/>
           <rect x="274" y="48" width="236" height="64" rx="22" fill="#FFFFFF"/>
           <path d="M286 106l-12 18 26-12z" fill="#FFFFFF"/>
-          <text x="298" y="87" font-family="Figtree,sans-serif" font-size="20" font-weight="600" fill="#10302C">Hi Dad, it's me.</text>
-          <g fill="#EFA93A"><rect x="288" y="146" width="5" height="14" rx="2.5"/><rect x="299" y="139" width="5" height="28" rx="2.5"/><rect x="310" y="143" width="5" height="20" rx="2.5"/><rect x="321" y="134" width="5" height="38" rx="2.5"/><rect x="332" y="141" width="5" height="24" rx="2.5"/><rect x="343" y="137" width="5" height="32" rx="2.5"/><rect x="354" y="144" width="5" height="18" rx="2.5"/><rect x="365" y="147" width="5" height="12" rx="2.5"/></g>
-          <text x="384" y="158" font-family="Figtree,sans-serif" font-size="14" style="fill:var(--amber-ink)">0:08</text>
+          <text x="298" y="87" font-family="Outfit,sans-serif" font-size="20" font-weight="600" fill="#2A1A1C">Hi Dad, it's me.</text>
+          <g fill="#E7A93A"><rect x="288" y="146" width="5" height="14" rx="2.5"/><rect x="299" y="139" width="5" height="28" rx="2.5"/><rect x="310" y="143" width="5" height="20" rx="2.5"/><rect x="321" y="134" width="5" height="38" rx="2.5"/><rect x="332" y="141" width="5" height="24" rx="2.5"/><rect x="343" y="137" width="5" height="32" rx="2.5"/><rect x="354" y="144" width="5" height="18" rx="2.5"/><rect x="365" y="147" width="5" height="12" rx="2.5"/></g>
+          <text x="384" y="158" font-family="Outfit,sans-serif" font-size="14" style="fill:var(--amber-ink)">0:08</text>
         </svg>
         <div class="body">
           <div class="eyebrow" style="color:var(--amber-ink)">Stream two</div>
@@ -421,26 +532,31 @@ body > .watermark{z-index:0}
 
   <section aria-labelledby="team-title">
     <div class="section-head">
-      <div><h2 id="team-title">Meet the team</h2><p class="muted" style="margin-top:4px">The builders and designers behind AIDE.</p></div>
-      <span class="pill teal">3 active previews</span>
+      <div><h2 id="team-title">Meet the team</h2><p class="muted" style="margin-top:4px">The founders building AIDE.</p></div>
+      <span class="pill teal">Antler 2026 cohort</span>
     </div>
     <div class="team">
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#CDEDE4"/><path d="M0 44c10-6 20-6 30 0s20 6 30 0v16H0z" fill="#9FD3C6"/><text x="30" y="37" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#133F3A">VS</text></svg><span class="status" style="background:#F2B04B"></span></div>
-        <div class="info"><h3>Vivek Subramanian</h3><div class="role">Tech Lead</div><span class="pill teal">Track &amp; Monitor</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#FBE7BE"/><circle cx="46" cy="14" r="10" fill="#F5C346"/><text x="30" y="38" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="700" fill="#82101A">NM</text></svg><span class="status" style="background:#3E7027"></span></div>
+        <div class="info"><h3>Noah Mendez</h3><div class="role">Founder &amp; CEO</div><span class="pill amber">Real-Time Audio</span></div>
       </article>
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#FCE4BF"/><circle cx="46" cy="14" r="10" fill="#F6CB85"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#6B430A">N</text></svg><span class="status" style="background:#2E7A6C"></span></div>
-        <div class="info"><h3>Noah Mendez</h3><div class="role">Founder</div><span class="pill amber">Real-Time Audio</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#FBEED8"/><path d="M0 44c10-6 20-6 30 0s20 6 30 0v16H0z" fill="#EFDFC4"/><text x="30" y="37" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="700" fill="#2F060C">VS</text></svg><span class="status" style="background:#E7A93A"></span></div>
+        <div class="info"><h3>Vivek Subramanian Ganesh</h3><div class="role">Co-founder · Tech</div><span class="pill teal">Track &amp; Monitor</span></div>
       </article>
       <article class="card member">
-        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#DDE4EF"/><path d="M0 30h60" stroke="#C3CEDF" stroke-width="10"/><text x="30" y="38" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-size="22" font-weight="700" fill="#2F3C53">E</text></svg><span class="status" style="background:#2E7A6C"></span></div>
-        <div class="info"><h3>Elijah</h3><div class="role">Data Lead</div><span class="pill slate">Data Insights</span></div>
+        <div class="avatar"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="30" fill="#EFDFC4"/><path d="M0 30h60" stroke="#E3CFAE" stroke-width="10"/><text x="30" y="38" text-anchor="middle" font-family="Outfit,sans-serif" font-size="22" font-weight="700" fill="#6F141B">EB</text></svg><span class="status" style="background:#3E7027"></span></div>
+        <div class="info"><h3>Elijah Korah Bino</h3><div class="role">Co-founder · Data</div><span class="pill slate">Data Insights</span></div>
       </article>
     </div>
   </section>
 
-  <footer><span>AIDE · Gentle companionship, dependable care</span><span>Preview build</span></footer>
+  <footer class="site">
+    <div><a class="logo" href="#home" data-route="home"><img src="assets/aide-logo.svg" width="32" height="32" alt=""><b>AIDE</b></a><p style="margin-top:10px">Gentle companionship, dependable care. Calmer evenings for people living with dementia.</p></div>
+    <div><h2>Contact</h2><ul><li><a href="#home" data-route="home" data-scroll="book">Book a call</a></li><li><span class="todo">[[TODO: hello@aide-care.com]]</span></li><li><span class="todo">[[TODO: city, ABN]]</span></li></ul></div>
+    <div><h2>Learn more</h2><ul><li><a href="#evidence" data-route="evidence">Evidence and sources</a></li><li><a href="#monitor" data-route="monitor">Track &amp; Monitor</a></li><li><a href="#companion" data-route="companion">Companion</a></li></ul></div>
+    <div class="legal"><span>© 2026 AIDE</span><span>Prototype · illustrative data · not a medical device</span></div>
+  </footer>
 </section>
 
 <!-- ========== MONITOR ========== -->
@@ -448,14 +564,14 @@ body > .watermark{z-index:0}
   <div class="pagehead">
     <span class="pill teal" style="align-self:flex-start">Stream one</span>
     <h1 id="mon-title">More informed. More ready.</h1>
-    <p>Predictive insights, personal engagement histories and simple tools for the people who care.</p>
+    <p>Clear evening records, personal engagement histories and simple tools for the people who care.</p>
   </div>
 
   <div class="dash">
     <div class="panel">
       <div class="panel-head">
         <div><div class="muted" style="font-size:13px;font-weight:600">Sundowning tracker · last 7 days</div><h2>When episodes start</h2></div>
-        <span class="pill amber"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>CarePulse v2.4</span>
+        <span class="pill amber"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Prototype</span>
       </div>
       <div class="stats">
         <div class="stat"><b id="stCount">0</b><span>Episodes</span></div>
@@ -499,8 +615,8 @@ body > .watermark{z-index:0}
       </div>
     </div>
     <div class="status" style="grid-column:1/-1">
-      <div><b>AIDE CarePulse Dashboard v2.4</b><br><span>Real-time behavioural monitoring active</span></div>
-      <span style="width:42px;height:42px;border-radius:21px;background:var(--brand-raised);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9FD3C6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      <div><b>AIDE Track &amp; Monitor</b><br><span>Prototype · illustrative data, stored only in this browser</span></div>
+      <span style="width:42px;height:42px;border-radius:21px;background:var(--brand-raised);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EFDFC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
     </div>
   </div>
 
@@ -519,14 +635,14 @@ body > .watermark{z-index:0}
   <section aria-labelledby="caps-title">
     <div class="section-head"><h2 id="caps-title">Key capabilities</h2></div>
     <div class="caps">
-      <article class="card cap"><div class="ic amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M7 16a5 5 0 0 1 10 0"/><path d="M3 16h18M6 20h12M12 5v3M5 9l2 1.5M19 9l-2 1.5"/></svg></div><h3>Sundowning tracker</h3><p>Tracks when sundowning starts, how long it lasts and how intense it gets, with pattern recognition that learns over time.</p></article>
+      <article class="card cap"><div class="ic amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M7 16a5 5 0 0 1 10 0"/><path d="M3 16h18M6 20h12M12 5v3M5 9l2 1.5M19 9l-2 1.5"/></svg></div><h3>Sundowning tracker</h3><p>Tracks when sundowning starts, how long it lasts and how intense it gets, with a clear weekly view of when evenings are hardest.</p></article>
       <article class="card cap"><div class="ic teal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v2l-3-2h-3"/></svg></div><h3>Engagement insights</h3><p>Notes the conversations residents enjoy, and what to avoid, so every interaction stays peaceful.</p></article>
-      <article class="card cap"><div class="ic dark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h3>Voice companion</h3><p>Sorts triggers and keeps notes for visiting family and clinicians, hands-free.</p></article>
+      <article class="card cap"><div class="ic dark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h3>Voice companion</h3><p>Records what helped and keeps notes for visiting family and the care team, hands-free.</p></article>
     </div>
   </section>
 
   <section class="soon" aria-labelledby="soon-title">
-    <svg width="110" height="90" viewBox="0 0 120 96" aria-hidden="true"><circle cx="60" cy="52" r="42" style="fill:var(--surface)"/><rect x="38" y="14" width="44" height="78" rx="10" fill="#133F3A"/><rect x="42" y="22" width="36" height="58" rx="5" fill="#F4F8F6"/><path d="M46 66l8-10 7 6 8-14 5 8" fill="none" stroke="#1F5A52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="60" cy="36" r="6" fill="#F2B04B"/><circle cx="98" cy="22" r="10" fill="#F2B04B"/><path d="M95 22l2.5 2.5L102 19" stroke="#2A1B04" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg width="110" height="90" viewBox="0 0 120 96" aria-hidden="true"><circle cx="60" cy="52" r="42" style="fill:var(--surface)"/><rect x="38" y="14" width="44" height="78" rx="10" fill="#2F060C"/><rect x="42" y="22" width="36" height="58" rx="5" fill="#FFFCF6"/><path d="M46 66l8-10 7 6 8-14 5 8" fill="none" stroke="#A3141F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="60" cy="36" r="6" fill="#E7A93A"/><circle cx="98" cy="22" r="10" fill="#E7A93A"/><path d="M95 22l2.5 2.5L102 19" stroke="#2A1B04" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <div><h2 id="soon-title">Available soon</h2><p class="muted">Manage care right from your phone.</p></div>
     <div class="stores">
       <div class="store"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span><small>Coming to</small><b>App Store</b></span></div>
@@ -546,7 +662,7 @@ body > .watermark{z-index:0}
   </div>
 
   <div class="live" id="live">
-    <div class="live-top"><b><span class="rec-dot"></span>Live audio link</b><span class="room">Dad's room</span></div>
+    <div class="live-top"><b><span class="rec-dot"></span>Live audio link</b><span class="room" data-room>Dad's room</span></div>
     <div class="screen" id="screen">
       <div class="face"><span class="ring"></span><span class="ring"></span><div class="disc" id="bigFace"></div></div>
       <div class="bubble idle" id="bubble" aria-live="polite">Waiting for your next message</div>
@@ -570,21 +686,9 @@ body > .watermark{z-index:0}
     </div>
   </div>
 
-  <section aria-labelledby="look-title">
-    <div class="section-head"><h2 id="look-title">Companion appearance</h2><span class="muted" style="font-size:14px">Also changes the face on Dad's TV</span></div>
-    <div class="looks" id="looks">
-      <button class="look" data-look="f1" aria-pressed="true"></button>
-      <button class="look" data-look="f2" aria-pressed="false"></button>
-      <button class="look" data-look="stick" aria-pressed="false"></button>
-    </div>
-    <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
-      <div style="font-weight:700;font-size:15px">Voice tone</div>
-      <div class="tone" id="tone">
-        <button data-tone="gentle" aria-pressed="true">Gentle</button>
-        <button data-tone="warm" aria-pressed="false">Warm</button>
-        <button data-tone="bright" aria-pressed="false">Bright</button>
-      </div>
-    </div>
+  <section class="card" style="padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap" aria-labelledby="look-title">
+    <div><h2 id="look-title" style="font-size:22px">Companion appearance and voice</h2><p class="muted" style="font-size:15px;margin-top:4px">Changes the face and voice on the TV in the resident's room.</p></div>
+    <button class="link-btn" type="button" data-customise aria-haspopup="dialog" aria-controls="drawer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Customise</button>
   </section>
 
   <div class="twocol">
@@ -600,12 +704,98 @@ body > .watermark{z-index:0}
     </section>
   </div>
 </section>
+
+<!-- ========== EVIDENCE ========== -->
+<section class="view" id="view-evidence" aria-labelledby="ev-title" hidden>
+  <div class="pagehead">
+    <span class="pill teal" style="align-self:flex-start">Evidence informed</span>
+    <h1 id="ev-title">Built on Australian evidence.</h1>
+    <p>The numbers behind the late-afternoon window, the rules AIDE is designed around, and exactly what AIDE does and doesn't do.</p>
+  </div>
+
+  <section aria-labelledby="ev-num">
+    <div class="section-head"><h2 id="ev-num">The problem in numbers</h2></div>
+    <div class="ev-stats">
+      <article class="card ev-stat"><b>22.5%</b><p>of falls in 25 Australian aged care homes happened between 2pm and 6pm, more than in any other four hours of the day.</p><p class="src">Wabe et al., <i>Int J Qual Health Care</i> 2022. 27,878 falls. <a href="#src-1">[1]</a></p></article>
+      <article class="card ev-stat"><b>~$2,500</b><p>average cost of a fall injury in Australian aged care. Fall injuries are about 20% of annual spending per resident.</p><p class="src">Okafor et al., <i>Injury Prevention</i> 2025. <a href="#src-2">[2]</a></p></article>
+      <article class="card ev-stat"><b aria-label="33% to 23%">33→23%</b><p>of residents living with dementia given an antipsychotic, 2018 to 2022. Progress, but still double the rate for residents without dementia.</p><p class="src">Raban et al., <i>JAMDA</i> 2025. <a href="#src-3">[3]</a></p></article>
+      <article class="card ev-stat"><b>215/44</b><p>mandatory average care minutes per resident per day, including 44 registered nurse minutes.</p><p class="src">Department of Health, Disability and Ageing. <a href="#src-4">[4]</a></p></article>
+    </div>
+  </section>
+
+  <div class="twocol">
+    <section class="card" style="padding:24px" aria-labelledby="ev-law">
+      <h2 id="ev-law" style="font-size:22px;margin-bottom:6px">Built around the Aged Care Act 2024</h2>
+      <p class="muted" style="font-size:15px;margin-bottom:6px">Since 1 November 2025, restrictive practices must be a last resort, with alternatives tried and documented first.</p>
+      <ul class="checks">
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Alternatives tried and documented first</b><span>Each routine started is a dated record of non-drug support.</span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Evidence for behaviour support plans</b><span>What was tried, when, and what helped, ready for plan review.</span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Strengthened Quality Standards, Standard 5</b><span>Supports the clinical care standard's expectations for behaviour support.</span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Less double documentation</b><span>Records flow to the care team without re-typing. <span class="todo">[[TODO: confirm integrations]]</span></span></div></li>
+      </ul>
+    </section>
+    <section class="card" style="padding:24px" aria-labelledby="ev-data">
+      <h2 id="ev-data" style="font-size:22px;margin-bottom:6px">Privacy and data</h2>
+      <p class="muted" style="font-size:15px;margin-bottom:6px">We only claim what is in place today.</p>
+      <ul class="checks">
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Privacy Act 1988 and the Australian Privacy Principles</b><span>Health information is handled as sensitive information.</span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Consent for recordings</b><span>From the resident or their substitute decision-maker.</span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Hosted in Australia</b><span><span class="todo">[[TODO: hosting region and provider]]</span></span></div></li>
+        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="#2F060C" stroke-width="1.5"/><path d="M8.5 14.5l3.6 3.6 7.4-8" fill="none" stroke="#A3141F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>No third-party model training on resident data</b><span><span class="todo">[[TODO: confirm]]</span></span></div></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="isnt" aria-labelledby="ev-isnt">
+    <h2 id="ev-isnt">What AIDE is, and isn't.</h2>
+    <p>AIDE is behaviour support and documentation software. It does not diagnose, assess, predict or triage any condition. It does not recommend or change medication, and it does not replace clinical judgement. Clinical decisions stay with your care team.</p>
+  </section>
+
+  <section class="card" style="padding:24px" aria-labelledby="ev-src">
+    <h2 id="ev-src" style="font-size:22px;margin-bottom:12px">Sources</h2>
+    <ol class="sources">
+      <li id="src-1">Wabe N. et al. <i>International Journal for Quality in Health Care</i> 2022;34(3):mzac050. 25 facilities, 27,878 falls, July 2014 to December 2019. <a href="https://academic.oup.com/intqhc/article/34/3/mzac050/6589456">academic.oup.com</a></li>
+      <li id="src-2">Okafor C. et al. <i>Injury Prevention</i>, January 2025. 303 residents, NSW and WA. <a href="https://news.uq.edu.au/2025-01-13-cost-falls-aged-care-uncovered">news.uq.edu.au</a></li>
+      <li id="src-3">Raban M.Z. et al. <i>Journal of the American Medical Directors Association</i> 2025. <a href="https://www.jamda.com/article/S1525-8610(25)00349-4/fulltext">jamda.com</a></li>
+      <li id="src-4">Department of Health, Disability and Ageing: care minutes in residential aged care.</li>
+    </ol>
+  </section>
+
+  <a class="demo" href="#home" data-route="home" data-scroll="book"><span><b>Talk it through with us</b><small>Book a 20-minute call</small></span><span class="play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span></a>
+</section>
 </main>
+
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-head">
+    <div><h2 id="drawer-title">Customise companion</h2><p>Changes show on the TV straight away.</p></div>
+    <button class="drawer-close" type="button" id="drawerClose" aria-label="Close customise panel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="drawer-body">
+    <section><h3>Appearance</h3><div class="looks" id="looks">
+      <button class="look" data-look="f1" aria-pressed="true"></button>
+      <button class="look" data-look="f2" aria-pressed="false"></button>
+      <button class="look" data-look="stick" aria-pressed="false"></button>
+    </div></section>
+    <section><h3>Voice tone</h3><div class="tone" id="tone">
+        <button data-tone="gentle" aria-pressed="true">Gentle</button>
+        <button data-tone="warm" aria-pressed="false">Warm</button>
+        <button data-tone="bright" aria-pressed="false">Bright</button>
+      </div><p class="hint-sm" style="margin-top:8px">Tone changes the speed and pitch of spoken messages.</p></section>
+    <section><h3><label for="roomName">Room name</label></h3><input type="text" id="roomName" maxlength="32" autocomplete="off" placeholder="Dad's room"><p class="hint-sm" style="margin-top:8px">Shown on the display and in the companion's activity log.</p></section>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn outline" type="button" id="previewVoice">Preview voice</button>
+    <button class="btn primary" type="button" id="drawerDone">Done</button>
+  </div>
+</aside>
 
 <nav class="tabs" aria-label="Main">
   <a href="#home" data-route="home"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
   <a href="#monitor" data-route="monitor"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Monitor</a>
   <a href="#companion" data-route="companion"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="10" r="6"/><path d="M9.5 11.5c1.4 1.2 3.6 1.2 5 0M6 21c1.6-2.4 3.7-3.5 6-3.5s4.4 1.1 6 3.5"/></svg>Companion</a>
+  <a href="#evidence" data-route="evidence"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg>Evidence</a>
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -631,7 +821,7 @@ const state = {
 };
 
 /* ---------- routing ---------- */
-const routes = ['home','monitor','companion'];
+const routes = ['home','monitor','companion','evidence'];
 let current = 'home';
 function go(route){
   if(!routes.includes(route)) route = 'home';
@@ -647,11 +837,13 @@ function go(route){
   if(route === 'monitor') renderChart();
 }
 document.addEventListener('click', e => {
+  if(e.target.closest('a[data-todo]')){ e.preventDefault(); return; }  // booking link and email still to come
   const a = e.target.closest('a[data-route]');
   if(!a) return;
   e.preventDefault();
   if(location.hash !== '#'+a.dataset.route){ try{ history.pushState(null,'','#'+a.dataset.route); }catch(err){} }
   go(a.dataset.route);
+  if(a.dataset.scroll){ const el = document.getElementById(a.dataset.scroll); if(el) requestAnimationFrame(() => el.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block:'start'})); }
 });
 window.addEventListener('hashchange', () => go(location.hash.slice(1)));
 window.addEventListener('popstate', () => go(location.hash.slice(1)));
@@ -659,9 +851,9 @@ window.addEventListener('scroll', () => $('#top').classList.toggle('scrolled', w
 
 /* ---------- avatars (SVG) ---------- */
 const AVATARS = {
-  f1: { name:'Warm face', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#CDEDE4"/><circle cx="66" cy="70" r="40" fill="#F3CDAE"/><path d="M28 62c2-24 18-36 38-36s36 12 38 36c-8-10-22-14-38-14s-30 4-38 14z" fill="#B9BFBC"/><circle cx="52" cy="72" r="4.5" fill="#133F3A"/><circle cx="80" cy="72" r="4.5" fill="#133F3A"/><path d="M52 88c8 7 20 7 28 0" stroke="#133F3A" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle cx="42" cy="84" r="5" fill="#F2A98C" opacity=".6"/><circle cx="90" cy="84" r="5" fill="#F2A98C" opacity=".6"/></svg>' },
-  f2: { name:'Glasses', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#FCE4BF"/><circle cx="66" cy="70" r="40" fill="#E8B48E"/><path d="M26 70c0-28 18-44 40-44s40 16 40 44c-4-14-12-20-18-22-8 6-30 8-46 2-8 4-14 10-16 20z" fill="#6B4A3A"/><circle cx="51" cy="72" r="11" fill="none" stroke="#133F3A" stroke-width="3"/><circle cx="81" cy="72" r="11" fill="none" stroke="#133F3A" stroke-width="3"/><path d="M62 72h8" stroke="#133F3A" stroke-width="3"/><circle cx="51" cy="72" r="3.5" fill="#133F3A"/><circle cx="81" cy="72" r="3.5" fill="#133F3A"/><path d="M54 92c7 5 17 5 24 0" stroke="#133F3A" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>' },
-  stick: { name:'Stick figure', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#DDE4EF"/><g fill="none" stroke="#133F3A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="66" cy="40" r="14"/><path d="M66 54v34M66 64l-20 12M66 64l22-16M66 88l-14 24M66 88l14 24"/></g><path d="M60 42c3 3 9 3 12 0" stroke="#133F3A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>' }
+  f1: { name:'Warm face', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#FBEED8"/><circle cx="66" cy="70" r="40" fill="#F3CDAE"/><path d="M28 62c2-24 18-36 38-36s36 12 38 36c-8-10-22-14-38-14s-30 4-38 14z" fill="#B9BFBC"/><circle cx="52" cy="72" r="4.5" fill="#2F060C"/><circle cx="80" cy="72" r="4.5" fill="#2F060C"/><path d="M52 88c8 7 20 7 28 0" stroke="#2F060C" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle cx="42" cy="84" r="5" fill="#F2A98C" opacity=".6"/><circle cx="90" cy="84" r="5" fill="#F2A98C" opacity=".6"/></svg>' },
+  f2: { name:'Glasses', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#FBE7BE"/><circle cx="66" cy="70" r="40" fill="#E8B48E"/><path d="M26 70c0-28 18-44 40-44s40 16 40 44c-4-14-12-20-18-22-8 6-30 8-46 2-8 4-14 10-16 20z" fill="#6B4A3A"/><circle cx="51" cy="72" r="11" fill="none" stroke="#2F060C" stroke-width="3"/><circle cx="81" cy="72" r="11" fill="none" stroke="#2F060C" stroke-width="3"/><path d="M62 72h8" stroke="#2F060C" stroke-width="3"/><circle cx="51" cy="72" r="3.5" fill="#2F060C"/><circle cx="81" cy="72" r="3.5" fill="#2F060C"/><path d="M54 92c7 5 17 5 24 0" stroke="#2F060C" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>' },
+  stick: { name:'Stick figure', svg:'<svg viewBox="0 0 132 132" aria-hidden="true"><circle cx="66" cy="66" r="66" fill="#EFDFC4"/><g fill="none" stroke="#2F060C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="66" cy="40" r="14"/><path d="M66 54v34M66 64l-20 12M66 64l22-16M66 88l-14 24M66 88l14 24"/></g><path d="M60 42c3 3 9 3 12 0" stroke="#2F060C" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>' }
 };
 function renderLooks(){
   $('#bigFace').innerHTML = AVATARS[state.look].svg;
@@ -815,7 +1007,7 @@ function renderEpisodes(){
     const day = d.toLocaleDateString([], {weekday:'short'});
     const bars = [1,2,3,4,5].map(n => '<i class="'+(n<=e.int?'on':'')+'"></i>').join('');
     const sub = [e.dur + ' min', e.helped && e.helped.length ? 'Helped: ' + e.helped.join(', ') : '', e.note].filter(Boolean).map(esc).join(' · ');
-    return '<li><div class="when"><b>'+d.getDate()+'</b><span>'+day+'</span></div><div class="ep-main"><div class="t">'+esc(fmtTime(d))+'<span class="int" aria-label="Intensity '+e.int+' of 5">'+bars+'</span>'+(e.example?' <span class="pill amber" style="margin-left:6px;padding:2px 8px">Example</span>':'')+'</div><div class="s">'+sub+'</div></div><button class="del" data-id="'+esc(e.id)+'" aria-label="Delete episode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>';
+    return '<li><div class="when"><b>'+d.getDate()+'</b><span>'+day+'</span></div><div class="ep-main"><div class="t">'+esc(fmtTime(d))+'<span class="int" role="img" aria-label="Intensity '+e.int+' of 5">'+bars+'</span>'+(e.example?' <span class="pill amber" style="margin-left:6px;padding:2px 8px">Example</span>':'')+'</div><div class="s">'+sub+'</div></div><button class="del" data-id="'+esc(e.id)+'" aria-label="Delete episode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>';
   }).join('');
 }
 $('#epList').addEventListener('click', e => {
@@ -852,7 +1044,7 @@ function initScene(){
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = T.PCFSoftShadowMap;
   const scene = new T.Scene();
-  const BG = 0x15433C;
+  const BG = 0x2F060C;
   scene.background = new T.Color(BG);
   scene.fog = new T.Fog(BG, 9, 16);
   const camera = new T.PerspectiveCamera(36, 1, .1, 50);
@@ -872,12 +1064,12 @@ function initScene(){
   floor.rotation.x = -Math.PI/2; floor.position.z = .6; floor.receiveShadow = true; scene.add(floor);
 
   // Back wall + skirting
-  const wall = new T.Mesh(new T.PlaneGeometry(9,3.6), mat(0xE3EEEA,{roughness:.95}));
+  const wall = new T.Mesh(new T.PlaneGeometry(9,3.6), mat(0xF6E9D6,{roughness:.95}));
   wall.position.set(0,1.8,-2.45); wall.receiveShadow = true; scene.add(wall);
-  box(9,.12,.04,0xC9DCD5,0,.06,-2.42);
+  box(9,.12,.04,0xE6D2B4,0,.06,-2.42);
 
   // Window with sunset
-  const sunset = canvasTex(256,192,(g,w,h)=>{ const gr=g.createLinearGradient(0,0,0,h); gr.addColorStop(0,'#6E62A0'); gr.addColorStop(.55,'#DB8A78'); gr.addColorStop(1,'#F7C77F'); g.fillStyle=gr; g.fillRect(0,0,w,h); g.fillStyle='#FFE3A6'; g.beginPath(); g.arc(w*.5,h*.72,26,0,Math.PI*2); g.fill(); g.fillStyle='#4C6E68'; g.beginPath(); g.ellipse(w*.3,h*1.02,w*.5,h*.22,0,0,Math.PI*2); g.fill(); g.fillStyle='#3E5E58'; g.beginPath(); g.ellipse(w*.85,h*1.05,w*.4,h*.2,0,0,Math.PI*2); g.fill(); });
+  const sunset = canvasTex(256,192,(g,w,h)=>{ const gr=g.createLinearGradient(0,0,0,h); gr.addColorStop(0,'#2F060C'); gr.addColorStop(.55,'#8A1C22'); gr.addColorStop(1,'#E7A93A'); g.fillStyle=gr; g.fillRect(0,0,w,h); g.fillStyle='#F5C346'; g.beginPath(); g.arc(w*.5,h*.72,26,0,Math.PI*2); g.fill(); g.fillStyle='#680C16'; g.beginPath(); g.ellipse(w*.3,h*1.02,w*.5,h*.22,0,0,Math.PI*2); g.fill(); g.fillStyle='#46080D'; g.beginPath(); g.ellipse(w*.85,h*1.05,w*.4,h*.2,0,0,Math.PI*2); g.fill(); });
   const win = new T.Mesh(new T.PlaneGeometry(1.2,.9), new T.MeshBasicMaterial({map:sunset.tex})); win.position.set(1.55,1.85,-2.44); scene.add(win);
   const wf = mat(0xFFFFFF,{roughness:.6});
   box(1.32,.06,.06,wf,1.55,2.33,-2.42); box(1.32,.06,.06,wf,1.55,1.37,-2.42); box(.06,1.02,.06,wf,.92,1.85,-2.42); box(.06,1.02,.06,wf,2.18,1.85,-2.42); box(.04,.9,.04,wf,1.55,1.85,-2.41);
@@ -885,7 +1077,7 @@ function initScene(){
 
   // Picture frame
   box(.55,.68,.04,0xC9A47A,-1.75,1.75,-2.42);
-  const pic = canvasTex(128,160,(g,w,h)=>{ g.fillStyle='#F3E6CF'; g.fillRect(0,0,w,h); g.fillStyle='#9FD3C6'; g.beginPath(); g.arc(w/2,h*.42,30,0,7); g.fill(); g.fillStyle='#7FB3A8'; g.fillRect(0,h*.7,w,h*.3); });
+  const pic = canvasTex(128,160,(g,w,h)=>{ g.fillStyle='#FFFCF6'; g.fillRect(0,0,w,h); g.fillStyle='#FEC746'; g.beginPath(); g.arc(w/2,h*.42,30,0,7); g.fill(); g.fillStyle='#3E7027'; g.fillRect(0,h*.7,w,h*.3); });
   const picM = new T.Mesh(new T.PlaneGeometry(.45,.58), new T.MeshBasicMaterial({map:pic.tex})); picM.position.set(-1.75,1.75,-2.395); scene.add(picM);
 
   // Rug
@@ -906,12 +1098,12 @@ function initScene(){
   const screen = new T.Mesh(new T.PlaneGeometry(1.54,.86), new T.MeshBasicMaterial({map:tvTex}));
   screen.position.set(0,1.18,-2.066); scene.add(screen);
   // mug + book on stand
-  cyl(.05,.045,.1,0xF2B04B,-.55,.58,-1.98); box(.3,.05,.22,0x5C9C8F,.5,.555,-2.0); box(.28,.04,.2,0xEFE3D2,.5,.6,-2.0);
+  cyl(.05,.045,.1,0xE7A93A,-.55,.58,-1.98); box(.3,.05,.22,0xA3141F,.5,.555,-2.0); box(.28,.04,.2,0xEFE3D2,.5,.6,-2.0);
 
   // Plant
   const potM = mat(0xE5D6C1);
   cyl(.2,.16,.36,potM,1.65,.18,-1.75);
-  const leafM = mat(0x4E9A6E,{flatShading:true,roughness:.7}), leafM2 = mat(0x3F8660,{flatShading:true,roughness:.7});
+  const leafM = mat(0x5E8D47,{flatShading:true,roughness:.7}), leafM2 = mat(0x3E7027,{flatShading:true,roughness:.7});
   [[0,.62,0,.26],[.14,.82,.05,.2],[-.12,.78,-.06,.2],[.04,1.0,-.02,.16],[-.06,.52,.12,.2]].forEach((l,i) => { const m = add(new T.IcosahedronGeometry(l[3],0), i%2?leafM:leafM2, 1.65+l[0], l[1], -1.75+l[2]); m.scale.set(1,1.25,1); m.rotation.set(i*.6,i*1.1,0); });
 
   // Lamp
@@ -922,7 +1114,7 @@ function initScene(){
   const lampLight = new T.PointLight(0xFFC77A, .9, 6, 1.6); lampLight.position.set(-1.55,1.5,-1.3); scene.add(lampLight);
 
   // Armchair
-  const chairM = mat(0x5C9C8F,{roughness:.95}), chairD = mat(0x467F73,{roughness:.95});
+  const chairM = mat(0x8A1C22,{roughness:.95}), chairD = mat(0x6F141B,{roughness:.95});
   box(1.02,.16,.92,chairD,0,.2,.95);
   box(.82,.2,.8,chairM,0,.38,.9);
   const back = box(.98,.82,.2,chairM,0,.78,1.36); back.rotation.x = -.08;
@@ -934,11 +1126,11 @@ function initScene(){
 
   // Side table + mug + glasses case
   cyl(.24,.24,.04,woodM,1.0,.58,.75,null,28); cyl(.025,.025,.56,poleM,1.0,.29,.75); cyl(.16,.18,.02,poleM,1.0,.01,.75);
-  cyl(.05,.045,.1,0xE3F4EF,.95,.65,.7); box(.16,.04,.07,0x36445E,1.08,.62,.82);
+  cyl(.05,.045,.1,0xFBEED8,.95,.65,.7); box(.16,.04,.07,0x2F060C,1.08,.62,.82);
 
   // Dad
   const knit = mat(0xE6A443,{roughness:.95}), knitD = mat(0xCB8B2E,{roughness:.95});
-  const pants = mat(0x435371,{roughness:.9}), skin = mat(0xE2AE88,{roughness:.7}), hairM = mat(0xD6DAD8,{roughness:1}), shoe = mat(0x744836);
+  const pants = mat(0x4A3A3C,{roughness:.9}), skin = mat(0xE2AE88,{roughness:.7}), hairM = mat(0xD6DAD8,{roughness:1}), shoe = mat(0x744836);
   const man = new T.Group(); scene.add(man);
   const torso = new T.Group(); torso.position.set(0,.5,1.1); torso.rotation.x = .1; man.add(torso);
   cyl(.19,.23,.56,knit,0,.3,0,torso);
@@ -970,49 +1162,49 @@ function initScene(){
   });
 
   // Lights
-  scene.add(new T.HemisphereLight(0xEAF6F2, 0x7A6A55, .55));
+  scene.add(new T.HemisphereLight(0xFBEFD9, 0x7A5A4A, .55));
   const sun = new T.DirectionalLight(0xFFE2BF, .75); sun.position.set(3.5,5,3); sun.castShadow = true;
   sun.shadow.mapSize.set(1024,1024); Object.assign(sun.shadow.camera, {left:-4,right:4,top:4,bottom:-4,near:1,far:15}); sun.shadow.bias = -.0005; sun.shadow.radius = 4;
   scene.add(sun);
-  const tvLight = new T.PointLight(0x7EE0C9, 1.1, 4.5, 1.8); tvLight.position.set(0,1.15,-1.6); scene.add(tvLight);
+  const tvLight = new T.PointLight(0xF5C346, 1.0, 4.5, 1.8); tvLight.position.set(0,1.15,-1.6); scene.add(tvLight);
 
   // TV screen drawing
   function drawFace(g, cx, cy, r, look, blink){
     const eyeH = blink ? .15 : 1;
     if(look === 'stick'){
-      g.fillStyle = '#DDE4EF'; g.beginPath(); g.arc(cx,cy,r,0,7); g.fill();
-      g.strokeStyle = '#133F3A'; g.lineWidth = r*.07; g.lineCap = 'round'; g.lineJoin = 'round';
+      g.fillStyle = '#EFDFC4'; g.beginPath(); g.arc(cx,cy,r,0,7); g.fill();
+      g.strokeStyle = '#2F060C'; g.lineWidth = r*.07; g.lineCap = 'round'; g.lineJoin = 'round';
       g.beginPath(); g.arc(cx, cy-r*.4, r*.22, 0, 7); g.stroke();
       g.beginPath(); g.moveTo(cx,cy-r*.18); g.lineTo(cx,cy+r*.34); g.moveTo(cx,cy-r*.03); g.lineTo(cx-r*.3,cy+r*.15); g.moveTo(cx,cy-r*.03); g.lineTo(cx+r*.33,cy-r*.27); g.moveTo(cx,cy+r*.34); g.lineTo(cx-r*.21,cy+r*.7); g.moveTo(cx,cy+r*.34); g.lineTo(cx+r*.21,cy+r*.7); g.stroke();
       return;
     }
     const f2 = look === 'f2';
-    g.fillStyle = f2 ? '#FCE4BF' : '#CDEDE4'; g.beginPath(); g.arc(cx,cy,r,0,7); g.fill();
+    g.fillStyle = f2 ? '#FBE7BE' : '#FBEED8'; g.beginPath(); g.arc(cx,cy,r,0,7); g.fill();
     g.save(); g.beginPath(); g.arc(cx,cy,r,0,7); g.clip();
     g.fillStyle = f2 ? '#E8B48E' : '#F3CDAE'; g.beginPath(); g.arc(cx,cy+r*.06,r*.6,0,7); g.fill();
     g.fillStyle = f2 ? '#6B4A3A' : '#B9BFBC'; g.beginPath(); g.ellipse(cx,cy-r*.32,r*.6,r*.32,0,Math.PI,0); g.fill();
     g.restore();
-    g.fillStyle = '#133F3A';
+    g.fillStyle = '#2F060C';
     [-1,1].forEach(s => { g.beginPath(); g.ellipse(cx+s*r*.22, cy+r*.08, r*.06, r*.06*eyeH, 0, 0, 7); g.fill(); });
-    if(f2){ g.strokeStyle = '#133F3A'; g.lineWidth = r*.04; [-1,1].forEach(s => { g.beginPath(); g.arc(cx+s*r*.23, cy+r*.08, r*.16, 0, 7); g.stroke(); }); g.beginPath(); g.moveTo(cx-r*.07,cy+r*.08); g.lineTo(cx+r*.07,cy+r*.08); g.stroke(); }
-    g.strokeStyle = '#133F3A'; g.lineWidth = r*.05; g.lineCap = 'round';
+    if(f2){ g.strokeStyle = '#2F060C'; g.lineWidth = r*.04; [-1,1].forEach(s => { g.beginPath(); g.arc(cx+s*r*.23, cy+r*.08, r*.16, 0, 7); g.stroke(); }); g.beginPath(); g.moveTo(cx-r*.07,cy+r*.08); g.lineTo(cx+r*.07,cy+r*.08); g.stroke(); }
+    g.strokeStyle = '#2F060C'; g.lineWidth = r*.05; g.lineCap = 'round';
     g.beginPath(); g.arc(cx, cy+r*.24, r*.18, .25*Math.PI, .75*Math.PI); g.stroke();
   }
   let lastDraw = 0, blinkUntil = 0, nextBlink = 2;
   function drawTV(t){
     const w = tvc.width, h = tvc.height, g = tvg;
-    const gr = g.createRadialGradient(w/2,h*.42,10,w/2,h*.45,w*.6); gr.addColorStop(0,'#2F8273'); gr.addColorStop(.6,'#14423B'); gr.addColorStop(1,'#0B2724');
+    const gr = g.createRadialGradient(w/2,h*.42,10,w/2,h*.45,w*.6); gr.addColorStop(0,'#8A1C22'); gr.addColorStop(.6,'#4A0910'); gr.addColorStop(1,'#2F060C');
     g.fillStyle = gr; g.fillRect(0,0,w,h);
     if(t > nextBlink){ blinkUntil = t + .14; nextBlink = t + 3 + Math.random()*3; }
     const talking = state.speaking;
     const r = 92, cx = w/2, cy = h*.4 + (talking ? Math.sin(t*9)*2 : 0);
-    if(talking){ g.strokeStyle = 'rgba(127,209,190,' + (.5 - ((t*.6)%1)*.5) + ')'; g.lineWidth = 4; g.beginPath(); g.arc(cx,cy,r*(1.05+((t*.6)%1)*.4),0,7); g.stroke(); }
+    if(talking){ g.strokeStyle = 'rgba(243,217,164,' + (.5 - ((t*.6)%1)*.5) + ')'; g.lineWidth = 4; g.beginPath(); g.arc(cx,cy,r*(1.05+((t*.6)%1)*.4),0,7); g.stroke(); }
     drawFace(g, cx, cy, r, state.look, t < blinkUntil);
     // waveform
     const n = 15, bw = 7, gap = 6, x0 = cx - (n*(bw+gap)-gap)/2;
-    for(let i=0;i<n;i++){ const amp = talking ? (.35 + .65*Math.abs(Math.sin(t*7 + i*.9))) : .18 + .08*Math.sin(t*1.5+i); const bh = 34*amp; g.fillStyle = i%3===1 ? '#F2B04B' : '#7FD1BE'; g.fillRect(x0 + i*(bw+gap), h*.8 - bh/2, bw, bh); }
+    for(let i=0;i<n;i++){ const amp = talking ? (.35 + .65*Math.abs(Math.sin(t*7 + i*.9))) : .18 + .08*Math.sin(t*1.5+i); const bh = 34*amp; g.fillStyle = i%3===1 ? '#E7A93A' : '#F3D9A4'; g.fillRect(x0 + i*(bw+gap), h*.8 - bh/2, bw, bh); }
     // caption
-    if(state.caption){ g.font = '600 22px Figtree, sans-serif'; g.textAlign = 'center'; const txt = state.caption.length > 46 ? state.caption.slice(0,45) + '…' : state.caption; const tw = Math.min(w-40, g.measureText(txt).width + 36); g.fillStyle = 'rgba(255,255,255,.92)'; roundRect(g, cx-tw/2, h*.9-20, tw, 36, 18); g.fill(); g.fillStyle = '#10302C'; g.fillText(txt, cx, h*.9+6); }
+    if(state.caption){ g.font = '600 22px Outfit, sans-serif'; g.textAlign = 'center'; const txt = state.caption.length > 46 ? state.caption.slice(0,45) + '…' : state.caption; const tw = Math.min(w-40, g.measureText(txt).width + 36); g.fillStyle = 'rgba(255,255,255,.92)'; roundRect(g, cx-tw/2, h*.9-20, tw, 36, 18); g.fill(); g.fillStyle = '#2A1A1C'; g.fillText(txt, cx, h*.9+6); }
     tvTex.needsUpdate = true;
   }
   function roundRect(g,x,y,w,h,r){ g.beginPath(); g.moveTo(x+r,y); g.arcTo(x+w,y,x+w,y+h,r); g.arcTo(x+w,y+h,x,y+h,r); g.arcTo(x,y+h,x,y,r); g.arcTo(x,y,x+w,y,r); g.closePath(); }
@@ -1072,7 +1264,46 @@ function initScene(){
   return { resize };
 }
 
+/* ---------- customise panel ---------- */
+const drawer = $('#drawer'), scrim = $('#scrim');
+let lastFocus = null;
+function drawerFocusables(){ return $$('button, input, [href]', drawer).filter(el => !el.disabled && el.offsetParent !== null); }
+function openDrawer(){
+  lastFocus = document.activeElement;
+  scrim.hidden = false; drawer.hidden = false;
+  $$('[data-customise]').forEach(b => b.setAttribute('aria-expanded','true'));
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => { const f = $('#looks .look[aria-pressed="true"]') || drawerFocusables()[0]; if(f) f.focus(); });
+}
+function closeDrawer(){
+  if(drawer.hidden) return;
+  drawer.hidden = true; scrim.hidden = true;
+  $$('[data-customise]').forEach(b => b.setAttribute('aria-expanded','false'));
+  document.body.style.overflow = '';
+  if(lastFocus && lastFocus.focus) lastFocus.focus();
+}
+$$('[data-customise]').forEach(b => { b.setAttribute('aria-expanded','false'); b.addEventListener('click', openDrawer); });
+$('#drawerClose').addEventListener('click', closeDrawer);
+$('#drawerDone').addEventListener('click', closeDrawer);
+scrim.addEventListener('click', closeDrawer);
+document.addEventListener('keydown', e => {
+  if(drawer.hidden) return;
+  if(e.key === 'Escape'){ e.preventDefault(); closeDrawer(); return; }
+  if(e.key === 'Tab'){
+    const f = drawerFocusables(); if(!f.length) return;
+    const first = f[0], last = f[f.length-1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+});
+$('#previewVoice').addEventListener('click', () => speak("Hello, it's evening now. You're safe, and I'm right here."));
+state.room = store.get('room', "Dad's room");
+function renderRoom(){ $$('[data-room]').forEach(el => { el.textContent = state.room; }); }
+$('#roomName').value = state.room;
+$('#roomName').addEventListener('input', e => { state.room = e.target.value.trim() || "Dad's room"; store.set('room', state.room); renderRoom(); });
+
 /* ---------- boot ---------- */
+renderRoom();
 renderLooks();
 renderActivity();
 renderChart();
@@ -1085,3 +1316,5 @@ catch(e){
 go(location.hash.slice(1) || 'home');
 })();
 </script>
+</body>
+</html>
